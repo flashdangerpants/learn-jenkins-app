@@ -25,7 +25,7 @@ pipeline {
                 sh '''
                     echo "Test stage"
                     test -f build/index.html
-                    sudo -u jenkins which npm
+                    /usr/local/bin/npm test
                 '''
             }
         }
