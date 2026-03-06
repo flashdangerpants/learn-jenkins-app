@@ -37,12 +37,13 @@ pipeline {
                             npm test
                         '''
                     }
-                }
+                
                     post {
                         always {
                             junit 'jtest-results/junit.xml'
                         }
                     }
+                }
                 stage ('E2E') {
                     agent {
                         docker {
