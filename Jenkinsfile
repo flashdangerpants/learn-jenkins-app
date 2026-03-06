@@ -14,6 +14,7 @@ pipeline {
             }
             steps {
                 sh '''
+                    echo "smol change"
                     ls -la
                     node --version
                     npm --version
