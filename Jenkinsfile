@@ -89,9 +89,9 @@ pipeline {
         }
 
         stage ('Approval') {
-            timeout (43) {
-                steps {
-                   input message: 'Deploy to Production?', ok: 'Proceed'
+            steps {
+                timeout (43) {
+                    input message: 'Deploy to Production?', ok: 'Proceed'
                 }
             }
         }
