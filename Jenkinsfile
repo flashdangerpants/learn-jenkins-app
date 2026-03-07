@@ -88,6 +88,9 @@ pipeline {
             }
         }
 
+        stage ('Approval') {
+            input message: 'Deploy to Production?', ok: 'Proceed'
+        }
 
         stage ('Deploy Prod') {
             agent {
