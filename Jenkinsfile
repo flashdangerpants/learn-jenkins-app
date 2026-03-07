@@ -89,7 +89,9 @@ pipeline {
         }
 
         stage ('Approval') {
-            input message: 'Deploy to Production?', ok: 'Proceed'
+            steps {
+                input message: 'Deploy to Production?', ok: 'Proceed'
+            }
         }
 
         stage ('Deploy Prod') {
